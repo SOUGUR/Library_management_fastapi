@@ -1,0 +1,7 @@
+user = "admin"
+password = "adminpassword123"
+role = "SUPERUSER" # Example for SUPERUSER
+
+user = "librarian1"
+password = "librarianpassword"
+role = "LIBRARIAN"  # Example for Librarian

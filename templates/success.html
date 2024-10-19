@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Success</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f4f4f4; /* Light background color for consistency */
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+        }
+        .container {
+            background-color: white; /* White background for the container */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            padding: 40px; /* Increased padding for better spacing */
+            text-align: center; /* Center text */
+        }
+        h1 {
+            color: #28a745; /* Bootstrap success color */
+        }
+        .btn {
+            width: 100%; /* Full-width buttons */
+            margin: 10px 0; /* Spacing between buttons */
+        }
+        .lead {
+            margin-bottom: 20px; /* Space below the lead text */
+        }
+        /* Style to align buttons in a grid */
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap; /* Allow buttons to wrap */
+            justify-content: center; /* Center buttons */
+        }
+        .btn-group .btn {
+            flex: 1 1 calc(25% - 20px); /* Responsive button size */
+            margin: 10px; /* Margin around buttons */
+            min-width: 150px; /* Minimum button width */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1 class="text-success">{{ message }}</h1>
+        <p class="lead">Well Done!</p>
+
+        <div class="btn-group">
+            <a href="/submit_borrow_book" class="btn btn-primary">Borrow a Book</a>
+            <a href="/perform_logout" class="btn btn-danger">Logout</a>
+            <a href="/submit_return_book" class="btn btn-primary">Return a Book</a>
+            <a href="/login" class="btn btn-primary">Login</a>
+            <a href="/available_books" class="btn btn-primary">View Available Books</a>
+            <a href="/add_book" class="btn btn-primary">Add a Book</a>
+            <a href="/librarians/pending" class="btn btn-primary">Pending Librarian Approvals</a>
+            <a href="/admin/users" class="btn btn-primary">Manage Users</a>
+            <a href="/users/delete" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.');">Delete Account</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

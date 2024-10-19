@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pending Librarians</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #f2f2f2; }
+        input[type="submit"] { background-color: #4CAF50; color: white; padding: 10px; border: none; cursor: pointer; }
+        input[type="submit"]:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <h1>Pending Librarian Requests</h1>
+
+    {% if message %}
+        <p style="color: green;">{{ message }}</p>
+    {% endif %}
+
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Action</th>
+        </tr>
+        {% for librarian in librarians %}
+        <tr>
+            <td>{{ librarian.username }}</td>
+            <td>
+                <form action="/librarians/approve" method="post">
+                    <input type="hidden" name="user_id" value="{{ librarian.id }}">
+                    <input type="submit" value="Approve">
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

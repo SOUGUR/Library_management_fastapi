@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrow Book</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f4f4f4; /* Light background color for consistency */
+        }
+
+        .container {
+            max-width: 400px; /* Limit form width */
+            margin: 50px auto; /* Center the form */
+            background-color: white; /* White background for form */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            padding: 20px; /* Padding inside the container */
+        }
+
+        h1 {
+            text-align: center; /* Centered heading */
+            color: #333; /* Dark text color */
+        }
+
+        label {
+            display: block; /* Block display for labels */
+            margin-bottom: 8px; /* Space below labels */
+            font-weight: bold; /* Bold text for labels */
+        }
+
+        input[type="text"] {
+            width: 100%; /* Full width input */
+            padding: 10px; /* Padding inside input */
+            margin-bottom: 20px; /* Space below input */
+            border: 1px solid #ccc; /* Light border */
+            border-radius: 4px; /* Rounded corners for input */
+        }
+
+        input[type="submit"] {
+            width: 100%; /* Full width button */
+            padding: 10px;
+            background-color: #4CAF50; /* Green background for button */
+            color: white; /* White text for button */
+            border: none; /* No border */
+            border-radius: 4px; /* Rounded corners for button */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Borrow a Book</h1>
+        <form action="/submit_borrow_book" method="post">
+            <label for="book_id">Book ID:</label>
+            <input type="text" id="book_id" name="book_id" required>
+            <input type="submit" value="Borrow Book">
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
