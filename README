@@ -1,0 +1,64 @@
+
+# Library_management_FastAPI
+
+Welcome to the LibraryFastAPI project! This project is a web application built using FastAPI, designed to manage a library's book inventory, user roles, and interactions. It allows users to view available books, add new books, and remove books based on user roles.
+
+## Features
+
+- **User Authentication**: Secure login and role-based access control for users (e.g., Librarian, Superuser).
+- **Book Management**: 
+  - View available books with details such as title, author, and available copies.
+  - Add new books to the inventory.
+  - Remove books from the inventory (restricted to Librarians and Superusers).
+- **Responsive UI**: A user-friendly interface that works well on both desktop and mobile devices.
+- **RESTful API**: Utilizes FastAPI to create a RESTful API for seamless interaction with the frontend.
+
+## Technologies Used
+
+- **Backend**: FastAPI
+- **Database**: SQLAlchemy with SQLite (or another database of your choice)
+- **Frontend**: HTML, CSS, and JavaScript
+- **Authentication**: Token_cookie-based authentication for secure access
+- **Deployment**: Instructions for local deployment or cloud hosting
+
+## Getting Started
+
+To run the project locally, follow these steps:
+
+1. **Clone the repository**:
+   git clone https://github.com/yourusername/libraryfastapi.git
+   cd libraryfastapi
+
+
+2. **Create a virtual environment**:
+   python -m venv myenv
+   source myenv/bin/activate  # On Windows use `myenv\Scripts\activate`
+
+3. **Install the required packages**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the application**:
+   uvicorn frontend.main:frontapp --reload
+
+5. Open your browser and navigate to `http://127.0.0.1:8000`.
+
+## Usage
+
+- Navigate to the '/available_books' endpoint to view the list of available books.
+- Borrow a Book: Navigate to '/submit_borrow_book' to borrow a book from the library by providing a book ID.
+- Logout: Click on the Logout button to exit your account securely.
+- Return a Book: Go to '/submit_return_book' and provide the book ID and submit to return any borrowed books.
+- Login: Access your account through the /login page and provide username and password.
+- View Available Books: Visit '/available_books' to view the list of available books, only Superuser and Librarians can remove book.
+- Add a Book: (Only for Librarians) Use the '/add_book' link to add a new book to the library's inventory.
+- Pending Librarian Approvals: (Only for Superusers and Librarians) Click on '/librarians/pending' to view and approve pending librarian applications.
+- Manage Users: (Only for admins) Navigate to '/admin/users' to manage users within the system.
+- Delete Account: (any valid user) Click on '/users/delete' to permanently delete your account (this action cannot be undone).
+
+
+## Contact
+
+For questions or feedback, feel free to reach out to me at sourabhgurav23@gmail.com.
+```
